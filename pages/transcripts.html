@@ -14,10 +14,13 @@ permalink: "/transcript/"
         </div>
         <!-- Transcript Display Section -->
         <div class="transcripts-display">
-          <p class="lead">Your transcripts will be displayed here.</p>
           <!-- Example Transcripts List -->
           <ul class="list-group">
-            <li class="list-group-item">Transcript 1 - <a href="#">Download</a></li>
+            <object data="{{ '/assets/pdfs/smith.pdf' | relative_url }}" type="application/pdf" width="100%" height="600px">
+                <p>Your browser does not support PDFs. Please download the PDF to view it: 
+                  <a href="{{ '/assets/pdfs/smith.pdf' | relative_url }}">Download PDF</a>.
+                </p>
+            </object>
           </ul>
         </div>
       </div>
