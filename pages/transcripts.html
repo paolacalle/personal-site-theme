@@ -10,12 +10,14 @@ permalink: "/transcript/"
         <h1 class="font-weight-bold mb-4 serif-font">Transcripts</h1>
         <!-- School Icon -->
         <div class="mb-3">
-          <img src="school-college-icon.png" alt="School Icon" class="img-fluid" style="max-height: 100px;">
-          <a href="https://www.smith.edu/" class="btn btn-dark text-white px-5 btn-lg">Smith College -- BS in Computer Science & Data Science -- Sept 2021 - May 2025</a>
+            <a href="https://www.smith.edu/" class="btn btn-dark text-white px-5 btn-lg">
+                <img src="{{ '/assets/images/smith.png' | relative_url }}" alt="Smith College" class="img-fluid" style="max-width: 100px;">
+                Smith College -- BS in Computer Science & Data Science -- Sept 2021 - May 2025
+            </a>
         </div>
 
         <!-- Transcript Display Section -->
-        <div class="transcripts-display">
+        <div class="mb-3">
           <!-- Example Transcripts List -->
           <ul class="list-group">
             <object data="{{ '/assets/pdfs/smith.pdf' | relative_url }}" type="application/pdf" width="100%" height="600px">
