@@ -17,12 +17,9 @@ permalink: "/transcript/"
 
       <!-- Transcript Display Section -->
       <div class="transcript-section bg-light p-4 rounded shadow-sm">
-        <object data="{{ '/assets/pdfs/smith.pdf' | relative_url }}" type="application/pdf" class="w-100" style="height: 600px;">
-          <p class="text-muted">
-            Your browser does not support PDFs. Please 
-            <a href="{{ '/assets/pdfs/smith.pdf' | relative_url }}" class="text-primary">download the PDF</a> to view it.
-          </p>
-        </object>
+        <div id="pdf-container">
+          <object data="{{ '/assets/pdfs/smith.pdf' | relative_url }}" type="application/pdf" class="w-100" style="height: 600px;"> </object>
+        </div>
       </div>
 
     </div>
