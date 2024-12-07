@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const pdfPath = '/assets/pdfs/smith.pdf';
+    const pdfPath = '/assets/pdfs/smith.pdf'; // Use absolute path to ensure correctness
     console.log('PDF Path:', pdfPath); // Log to verify the path
     const pdfContainer = document.getElementById('pdf-container');
 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
       fallbackMessage.className = 'text-muted';
       fallbackMessage.innerHTML = `
         Your browser does not support PDFs. Please 
-        <a href="${pdfPath}" class="text-primary">download the PDF</a> to view it.
+        <a href="${pdfPath}" class="text-primary" download>download the PDF</a> to view it.
       `;
       pdfObject.appendChild(fallbackMessage);
       pdfContainer.appendChild(pdfObject);
@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const downloadButton = document.createElement('a');
       downloadButton.href = pdfPath;
       downloadButton.className = 'btn btn-primary';
-      downloadButton.textContent = 'View PDF';
+      downloadButton.textContent = 'Download PDF';
+      downloadButton.setAttribute('download', 'smith.pdf'); // Add download attribute to force download
       pdfContainer.appendChild(downloadButton);
     }
   });
